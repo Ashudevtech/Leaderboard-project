@@ -1,0 +1,154 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(to bottom, #8cdb8c, #e6f7e6);
+    font-family: 'Poppins', sans-serif;
+    color: #333;
+    min-height: 100vh;
+}
+
+h1 {
+    font-size: 3.5rem;
+    margin-bottom: 20px;
+    text-align: center;
+    color: #1a5e1a; /* Dark green for the heading */
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+form {
+    background-color: #d9f7d9; /* Light green, reminiscent of a cricket pitch */
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s, box-shadow 0.3s;
+    border: 2px solid #4caf50; /* Strong green border to represent the game */
+}
+
+input,
+select {
+    width: 100%;
+    max-width: 250px;
+    height: 50px;
+    padding: 10px;
+    font-size: 1rem;
+    border: 2px solid #4caf50; /* Strong green borders */
+    border-radius: 10px;
+    margin: 10px 0;
+    background-color: #f0fff0; /* Very light green for input backgrounds */
+    color: #333;
+    transition: background-color 0.3s, border 0.3s;
+}
+
+input:focus,
+select:focus {
+    background-color: #ffffff; /* Keeping white on focus for clarity */
+    outline: none;
+    border: 2px solid #006400; /* Darker green for focus */
+}
+
+button {
+    width: 100%;
+    max-width: 250px;
+    height: 50px;
+    padding: 10px;
+    font-size: 1.2rem;
+    color: #ffffff;
+    background: linear-gradient(135deg, #ff9800, #ff5722); /* Orange to red gradient */
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.2s, box-shadow 0.3s;
+}
+
+button:hover {
+    background: linear-gradient(135deg, #e68900, #e64a19); /* Hover effect for button */
+    transform: translateY(-2px);
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+}
+
+.container {
+    width: 90%;
+    max-width: 800px;
+    margin: 40px 0;
+    overflow-y: auto;
+    border-radius: 15px;
+    background-color: #ccdddf; /* Soft light green for container background */
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+    display: flex;
+    flex-direction: column;
+}
+
+.container div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    margin: 10px;
+    background-color: #c8e6c9; /* Light green for leaderboard entries */
+    border-radius: 10px;
+    transition: transform 0.2s, background-color 0.2s;
+}
+
+.container div:hover {
+    background-color: #b2e0b2; /* Slightly darker green on hover */
+    transform: translateY(-2px);
+}
+
+button.inc,
+button.dec,
+button.del {
+    width: auto;
+    padding: 5px 10px;
+    margin: 0 5px;
+    background: #ffc107; /* Yellow for action buttons */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.2s;
+}
+
+button.inc:hover,
+button.dec:hover,
+button.del:hover {
+    background: #e0a800; /* Darker yellow on hover */
+    transform: scale(1.05);
+}
+
+.container::-webkit-scrollbar {
+    width: 12px;
+}
+
+.container::-webkit-scrollbar-thumb {
+    background: #007f0e; /* Dark green for scrollbar */
+    border-radius: 6px;
+}
+
+.container::-webkit-scrollbar-thumb:hover {
+    background: #005600; /* Darker green on hover */
+}
+
+::placeholder {
+    color: #aaa;
+}
+
+@media (max-width: 600px) {
+    form {
+        width: 90%;
+    }
+
+    h1 {
+        font-size: 2.8rem;
+    }
+
+    button, input, select {
+        width: 100%;
+    }
+}
